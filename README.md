@@ -10,7 +10,7 @@
 <a href="https://www.paypal.me/Jeremy38100" target="_blank"><img src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/PP_logo_h_200x51.png" height="42" alt="PayPal"></a>
 
 ## 🏁 Install
-`npm install img-download-cli`
+`npm install -g img-download-cli`
 
 ## 🏃‍♂️ Usage
 
