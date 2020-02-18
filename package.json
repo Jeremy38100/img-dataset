@@ -1,7 +1,7 @@
 {
-  "name": "awesome-image-downloader",
+  "name": "img-download-cli",
   "version": "1.0.0",
-  "description": "Awesome image scrapper with cool features",
+  "description": "Simple search and download images from the web",
   "main": "dist/src/index.js",
   "types": "dist/src/index.d.ts",
   "scripts": {
@@ -11,14 +11,14 @@
   },
   "dependencies": {
     "axios": "^0.19.2",
+    "chalk": "^3.0.0",
     "cli-progress": "^3.6.0",
-    "images-scraper": "^4.0.0",
-    "mkdirp": "^1.0.3",
     "ora": "^4.0.3",
-    "request": "^2.88.2",
+    "puppeteer": "^2.1.1",
     "yargs": "^15.1.0"
   },
   "devDependencies": {
+    "@types/chalk": "^2.2.0",
     "@types/mkdirp": "^1.0.0",
     "@types/mocha": "^7.0.1",
     "@types/node": "^13.7.1",

@@ -11,10 +11,18 @@ export class YandexProvider extends Scrapper {
    super(search, nbImages, types);
   }
 
+  private getUrl() {
+    let url = `https://yandex.com/images/search?text=${this.search}`;
+    if (this.types.length === 1) {
+      url += '&itype=' + this.types[0];
+    }
+    return url
+  }
+
   async init() {
     this.browser = await launch({headless: true});
     this.page = await this.browser.newPage();
-    await this.page.goto(`https://yandex.com/images/search?text=${this.search}`);
+    await this.page.goto(this.getUrl());
     await this.page.waitForSelector('.serp-item');
   }
 
@@ -29,13 +37,7 @@ export class YandexProvider extends Scrapper {
     return this.links;
   }
 
-  async countPageLinks(): Promise<number> {
-    return this.page.evaluate(() =>
-      Array.from(document.querySelectorAll('.serp-item')).length
-    );
-  }
-
-  async getPageLinks(): Promise<string[]> {
+  private async getPageLinks(): Promise<string[]> {
     const links = await this.page.evaluate(() => {
       const elements = Array.from(document.querySelectorAll('.serp-item'));
       const links: string[] = elements
@@ -56,13 +58,13 @@ export class YandexProvider extends Scrapper {
      })
   }
 
-  async getLinksFrom(indexFrom: number, nb: number): Promise<string[]> {
-    while (await this.countPageLinks() < indexFrom + nb) await this.scroll();
+  private async getLinksFrom(indexFrom: number, nb: number): Promise<string[]> {
+    while ((await this.getPageLinks()).length < indexFrom + nb) await this.scroll();
     const links = await this.getPageLinks()
     return links.splice(indexFrom, nb);
   }
 
-  async scroll() {
+  private async scroll() {
     await this.page.evaluate(_ => window.scrollBy(0, window.innerHeight));
   }
 }
