@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "declaration": true,
+    "outDir": "./dist",
+    "strict": true,
+    "types": [ "mocha", "node" ],
+    "typeRoots": [ "node_modules/@types" ],
+    "moduleResolution": "node",
+    "noImplicitAny": false
+  }
+}
