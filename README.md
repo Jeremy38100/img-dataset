@@ -2,8 +2,11 @@
 [![License](https://img.shields.io/npm/l/img-dataset.svg)](LICENSE)
 [![Version](https://img.shields.io/npm/v/img-dataset.svg)](https://www.npmjs.com/package/img-dataset)
 [![Build Status](https://travis-ci.org/Jeremy38100/img-dataset.svg?branch=master)](https://travis-ci.org/Jeremy38100/img-dataset)
+[![Bundlephobia](https://badgen.net/bundlephobia/min/img-dataset)](https://bundlephobia.com/result?p=img-dataset@1.0.0)
 
 🖼 CLI to Simple search and download images from the web
+
+![Demo](https://github.com/Jeremy38100/img-dataset/raw/master/resources/cli.gif)
 
 ## ☕️ Support
 <a href="https://www.buymeacoffee.com/jOVt3wg" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="42" ></a>
