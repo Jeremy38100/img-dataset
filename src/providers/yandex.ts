@@ -22,7 +22,11 @@ export class YandexProvider extends Scrapper {
   async init() {
     this.browser = await launch({
       headless: true,
-      args:['--no-sandbox', '--disable-setuid-sandbox'],
+      args:[
+        '--no-sandbox',
+        '--disable-setuid-sandbox',
+        '--disable-dev-shm-usage',
+      ],
     });
     this.page = await this.browser.newPage();
     await this.page.goto(this.getUrl());
