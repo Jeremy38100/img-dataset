@@ -1,6 +1,6 @@
 {
   "name": "img-dataset",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Simple CLI to search and download images from the web",
   "main": "dist/src/index.js",
   "bin": "dist/src/index.js",
