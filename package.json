@@ -1,13 +1,22 @@
 {
-  "name": "img-download-cli",
+  "name": "img-dataset",
   "version": "1.0.0",
-  "description": "Simple search and download images from the web",
+  "description": "Simple CLI to search and download images from the web",
   "main": "dist/src/index.js",
+  "bin": "dist/src/index.js",
   "types": "dist/src/index.d.ts",
+  "bugs": {
+    "url": "https://github.com/Jeremy38100/img-dataset/issues"
+  },
+  "homepage": "https://github.com/Jeremy38100/img-dataset#readme",
   "scripts": {
     "prepublish": "npm run build",
     "build": "tsc",
     "test": "mocha --timeout 30000 -r ts-node/register test/index.test.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jeremy38100/img-dataset.git"
   },
   "dependencies": {
     "axios": "^0.19.2",
@@ -32,7 +41,8 @@
   "keywords": [
     "cli",
     "scrapper",
-    "images",
+    "downloader",
+    "image",
     "dataset"
   ],
   "author": "Jeremy38100",
