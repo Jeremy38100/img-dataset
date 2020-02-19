@@ -20,7 +20,10 @@ export class YandexProvider extends Scrapper {
   }
 
   async init() {
-    this.browser = await launch({headless: true});
+    this.browser = await launch({
+      headless: true,
+      args:['--no-sandbox', '--disable-setuid-sandbox'],
+    });
     this.page = await this.browser.newPage();
     await this.page.goto(this.getUrl());
     await this.page.waitForSelector('.serp-item');
