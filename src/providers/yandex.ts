@@ -23,9 +23,13 @@ export class YandexProvider extends Scrapper {
     this.browser = await launch({
       headless: true,
       args:[
-        '--no-sandbox',
-        '--disable-setuid-sandbox',
+        '--disable-gpu',
         '--disable-dev-shm-usage',
+        '--disable-setuid-sandbox',
+        '--no-first-run',
+        '--no-sandbox',
+        '--no-zygote',
+        '--single-process'
       ],
     });
     this.page = await this.browser.newPage();
