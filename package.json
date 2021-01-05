@@ -19,7 +19,7 @@
     "url": "git+https://github.com/Jeremy38100/img-dataset.git"
   },
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "chalk": "^3.0.0",
     "cli-progress": "^3.6.0",
     "ora": "^4.0.3",
